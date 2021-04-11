@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Windows 95 UI Kit crafted by Themesberg.com">
+    <meta name="author" content="Themesberg">
+    <title>TEAM 5 CHART</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Pixel CSS -->
+    <link type="text/css" rel="stylesheet" href="css/pixel.css">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- highchart(순서 중요! jquery 다음에 위치해야할 것 -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <!-- exprting -->
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <title>Juhwan Chart</title>
+</head>
+<body>
+	<main>
+		<!-- Hero -->
+		<section class="section-sm bg-secondary">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="mt-5 mb-5 mt-md-0">
+							<h4 class="text-white">Juhwan's chart</h4>
+						</div>
+					</div>
+				</div>
+				<!-- html -->
+				<div id="container" style="height: 700px; min-width: 310px"></div>
+				<!-- 차트 넣는 곳 -->
+			</div>
+		</section>
+	</main>
+	<!-- javascript -->
+	<script>
+		function drawChart() {
+			const chartdata = [];
+			$
+					.getJSON(
+							"https://poloniex.com/public?command=returnChartData&currencyPair=USDT_BTC&start=1455699200&end=9999999999&period=14400",
+							function(data) {
+								//getJSON으로 데이터 불러와서 콜백함수 실행 후 원하는 data를 each함수를 이용해 가공
+								$.each(data, function(i, item) {
+									chartdata.push([ item.date * 1000,
+											item.open, item.high, item.low,
+											item.close, ]); //시간,open(시초가),high(고가),low(저가),close(종가)를 빈 배열에 push!
+								});
+							})
+					.done(
+							function() {
+								//push를 마치면 콜백함수 실행
+								Highcharts
+										.stockChart(
+												"container",
+												{
+													//highchart 생성
+													title : {
+														text : "Bitcoin Price(USD)",
+													},
+													rangeSelector : {
+														//기본 옵션 사용(커스텀하는 방법을 찾지 못했다^^;)
+														//1m,3m,6m (분)
+														//YTD (연초 대비 증감율)
+														//1Y (년)
+														//ALL(전체)
+														dropdownLabel : "{rangeTitle}",
+														minInputLabel : "Select start date.",
+														maxInputLabel : "Select end date.",
+														clickButtonAnnouncement : "Viewing {axisRangeDescription}",
+													},
+													plotOptions : {
+														//캔들스틱 컬러 조정
+														candlestick : {
+															color : "#e74c3c", //down
+															upColor : "#2ecc71", //up
+														},
+													},
+													series : [ {
+														//마우스 올릴 때 출력할 데이터들
+														name : "BTC",
+														type : "candlestick",
+														data : chartdata,
+														tooltip : {
+															valueDecimals : 8,
+														},
+													}, ],
+												});
+							});
+		}
+		drawChart();
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+"DESCRIPTION" : {"USE_DT":"사용일자","SUB_STA_NM":"역명","WORK_DT":"등록일자","RIDE_PASGR_NUM":"승차총승객수","LINE_NUM":"호선명","ALIGHT_PASGR_NUM":"하차총승객수"},
+"DATA" : [
+{"line_num":"2호선","ride_pasgr_num":81771,"alight_pasgr_num":80369,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"강남"},
+{"line_num":"2호선","ride_pasgr_num":29477,"alight_pasgr_num":29071,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"강변(동서울터미널)"},
+{"line_num":"2호선","ride_pasgr_num":32408,"alight_pasgr_num":33896,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"건대입구"},
+{"line_num":"2호선","ride_pasgr_num":33255,"alight_pasgr_num":37523,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"교대(법원.검찰청)"},
+{"line_num":"2호선","ride_pasgr_num":62296,"alight_pasgr_num":62693,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"구로디지털단지"},
+{"line_num":"2호선","ride_pasgr_num":22878,"alight_pasgr_num":22946,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"구의(광진구청)"},
+{"line_num":"2호선","ride_pasgr_num":26544,"alight_pasgr_num":26269,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"낙성대(강감찬)"},
+{"line_num":"2호선","ride_pasgr_num":18708,"alight_pasgr_num":22096,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"당산"},
+{"line_num":"2호선","ride_pasgr_num":25342,"alight_pasgr_num":25712,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"대림(구로구청)"},
+{"line_num":"2호선","ride_pasgr_num":1446,"alight_pasgr_num":1521,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"도림천"},
+{"line_num":"2호선","ride_pasgr_num":11195,"alight_pasgr_num":12665,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"동대문역사문화공원(DDP)"},
+{"line_num":"2호선","ride_pasgr_num":21749,"alight_pasgr_num":23347,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"뚝섬"},
+{"line_num":"2호선","ride_pasgr_num":21299,"alight_pasgr_num":21659,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"문래"},
+{"line_num":"2호선","ride_pasgr_num":18232,"alight_pasgr_num":19197,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"방배"},
+{"line_num":"2호선","ride_pasgr_num":24394,"alight_pasgr_num":22833,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"봉천"},
+{"line_num":"2호선","ride_pasgr_num":34399,"alight_pasgr_num":38341,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"사당"},
+{"line_num":"2호선","ride_pasgr_num":47978,"alight_pasgr_num":48741,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"삼성(무역센터)"},
+{"line_num":"2호선","ride_pasgr_num":13881,"alight_pasgr_num":13758,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"상왕십리"},
+{"line_num":"2호선","ride_pasgr_num":46147,"alight_pasgr_num":45514,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"서울대입구(관악구청)"},
+{"line_num":"2호선","ride_pasgr_num":20887,"alight_pasgr_num":20515,"work_dt":"20210408","use_dt":"20210405","sub_sta_nm":"서초"}
+
+]
+}
